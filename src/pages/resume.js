@@ -6,14 +6,20 @@ import Image from "../components/image";
 import Timeline from "../components/Timeline";
 import CV from "../components/CV";
 import SEO from "../components/seo";
+import Skills from "../components/Skills";
 import { Typography } from "@material-ui/core";
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <CV />
-    <Typography variant="h2" align="center" style={{color: 'white', fontSize: '3rem'}}>
-      Timeline...
+    <Skills />
+    <Typography
+      variant="h2"
+      align="center"
+      style={{ color: "white", fontSize: "2rem" }}
+    >
+      {/* time... */}
     </Typography>
     <Timeline />
   </Layout>
