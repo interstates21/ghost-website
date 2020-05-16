@@ -54,21 +54,23 @@ const StyledMenuItem = withStyles(theme => ({
   },
 }))(MenuItem);
 
-const ContactLink = ({ title, Icon }) => {
+const ContactLink = ({ title, Icon, href }) => {
   return (
     <StyledMenuItem>
-      <ListItemIcon>
-        <Icon
-          size={20}
-          style={{
-            // color: "",
-            position: "relative",
-            top: 3,
-            marginRight: 8,
-          }}
-        />
-        {title}
-      </ListItemIcon>
+      <a href={href || "#"} target="_blank">
+        <ListItemIcon>
+          <Icon
+            size={20}
+            style={{
+              // color: "",
+              position: "relative",
+              top: 3,
+              marginRight: 8,
+            }}
+          />
+          {title}
+        </ListItemIcon>
+      </a>
     </StyledMenuItem>
   );
 };
@@ -85,22 +87,25 @@ export default function CustomizedMenus() {
 
   return (
     <div>
+      <a href="https://github.com/interstates21" target="_blank">
+        <Button
+          aria-controls="customized-menu"
+          aria-haspopup="true"
+          variant="contained"
+          color="secondary"
+          // onClick={{w}}
+        >
+          <FaGithubAlt
+            size={20}
+            style={{ position: "relative", bottom: 1.5, marginRight: 5 }}
+          />
+          GitHub
+        </Button>
+      </a>
       <Button
         aria-controls="customized-menu"
         aria-haspopup="true"
-        variant="contained"
-        color="secondary"
-      >
-        <FaGithubAlt
-          size={20}
-          style={{ position: "relative", bottom: 1.5, marginRight: 5 }}
-        />
-        GitHub
-      </Button>
-      <Button
-        aria-controls="customized-menu"
-        aria-haspopup="true"
-        style={{marginLeft: 15}}
+        style={{ marginLeft: 15 }}
         variant="contained"
         color="secondary"
         onClick={handleClick}
@@ -125,12 +130,36 @@ export default function CustomizedMenus() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <ContactLink title="LinkedIn" Icon={FaLinkedin} />
-        <ContactLink title="Facebook" Icon={FaFacebook} />
-        <ContactLink title="Instagram" Icon={FaInstagram} />
-        <ContactLink title="Telegram" Icon={FaTelegram} />
-        <ContactLink title="Discord" Icon={FaDiscord} />
-        <ContactLink title="Upwork" Icon={FaUser} />
+        <ContactLink
+          title="LinkedIn"
+          Icon={FaLinkedin}
+          href={"https://www.linkedin.com/in/oleksii-kupin-188b05154"}
+        />
+        <ContactLink
+          title="Facebook"
+          Icon={FaFacebook}
+          href={"https://www.facebook.com/profile.php?id=100002359261444"}
+        />
+        <ContactLink
+          title="Instagram"
+          Icon={FaInstagram}
+          href={"https://www.instagram.com/softlight96/"}
+        />
+        <ContactLink
+          title="Telegram"
+          Icon={FaTelegram}
+          href={"https://t.me/softlight96"}
+        />
+        <ContactLink
+          title="Discord"
+          Icon={FaDiscord}
+          href={"https://discord.gg/uuQAMQt"}
+        />
+        <ContactLink
+          title="Upwork"
+          Icon={FaUser}
+          href={"https://www.upwork.com/freelancers/~01496d1e1dedc0de73"}
+        />
       </StyledMenu>
     </div>
   );

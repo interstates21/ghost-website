@@ -11,7 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 // import { Collapse } from 'react-collapse';
-import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFViewer } from "@react-pdf/renderer";
 import MyDocument from "./MyDocument";
 
 const useStyles = makeStyles(theme => ({
@@ -35,7 +35,7 @@ const CV = () => {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
   return (
-    <Grid container style={{ marginBottom: '2%'}}>
+    <Grid container style={{ marginBottom: "2%" }}>
       <Grid item xs={12}>
         <ExpansionPanel className={classes.root}>
           <ExpansionPanelSummary
@@ -48,13 +48,13 @@ const CV = () => {
             id="panel1a-header"
           >
             <Button variant="contained" color="secondary">
-              <PDFDownloadLink
+              {/* <PDFDownloadLink
                 fileName="Oleksii_Kupin_CV_React"
                 document={<MyDocument />}
                 style={{ color: "#fff" }}
-              >
-                Download PDF
-              </PDFDownloadLink>
+              > */}
+              Download PDF
+              {/* </PDFDownloadLink> */}
             </Button>
             <Typography className={classes.heading}>Expend Document</Typography>
           </ExpansionPanelSummary>
