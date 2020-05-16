@@ -11,6 +11,8 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
+import Menu from "./Menu";
+import Hidden from "@material-ui/core/Hidden";
 import InputBase from "@material-ui/core/InputBase";
 import { Link } from "gatsby";
 import { GiGluttonousSmile } from "react-icons/gi";
@@ -28,6 +30,8 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     display: "none",
+    position: "relative",
+    top: 4,
     color: "white",
     textDecoration: "none",
     [theme.breakpoints.up("sm")]: {
@@ -118,6 +122,9 @@ export default function Bar({ siteTitle }) {
               activeClassName={classes.title}
               style={{
                 display: "flex",
+                width: 170,
+                maxWidth: 170,
+
                 flexDirection: "row",
                 textDecoration: "none",
                 cursor: "pointer",
@@ -130,7 +137,7 @@ export default function Bar({ siteTitle }) {
                 imgProps={{
                   style: {
                     position: "relative",
-                    top: 13,
+                    top: 15,
                     right: 1,
                   },
                 }}
@@ -139,20 +146,27 @@ export default function Bar({ siteTitle }) {
                 {siteTitle}
               </Typography>
             </Link>
-            <Tabs />
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ "aria-label": "search" }}
-              />
-            </div>
+            <Hidden smDown>
+              <>
+                <Tabs />
+                <div className={classes.search}>
+                  <div className={classes.searchIcon}>
+                    <SearchIcon />
+                  </div>
+                  <InputBase
+                    placeholder="Search"
+                    classes={{
+                      root: classes.inputRoot,
+                      input: classes.inputInput,
+                    }}
+                    inputProps={{ "aria-label": "search" }}
+                  />
+                </div>
+              </>
+            </Hidden>
+            <Hidden smUp>
+              <Menu />
+            </Hidden>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

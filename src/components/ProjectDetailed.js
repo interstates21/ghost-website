@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     height: "90vh",
     display: "flex",
     flexDirection: "column",
-    padding: "4%",
+    padding: "30px",
     overflowY: "visible",
     alignItems: "center",
   },
@@ -194,7 +194,12 @@ export default function RecipeReviewCard({ item }) {
           </div>
         </Grid>
       </Grid>
-      <Grid container justify="center" style={{ marginTop: "4%" }} spacing={5}>
+      <Grid
+        container
+        justify="center"
+        style={{ marginTop: "30px" }}
+        spacing={5}
+      >
         {/* <Grid item xs={10}> */}
         {/* </Grid> */}
         {item.pics.map((pic, index) => (

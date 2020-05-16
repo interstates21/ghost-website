@@ -35,7 +35,7 @@ const CV = () => {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
   return (
-    <Grid container style={{ marginBottom: '2%'}}>
+    <Grid container style={{ marginBottom: "2%" }}>
       <Grid item xs={12}>
         <ExpansionPanel className={classes.root}>
           <ExpansionPanelSummary
@@ -56,7 +56,7 @@ const CV = () => {
                 Download PDF
               </PDFDownloadLink>
             </Button>
-            <Typography className={classes.heading}>Expend Document</Typography>
+            <Typography className={classes.heading}>View</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <PDFViewer className={classes.viewer}>

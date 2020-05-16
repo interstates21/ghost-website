@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={Theme}>
         <AppBar siteTitle={data.site.siteMetadata.title} />
         <Container maxWidth="lg">
-          <main style={{ flex: 1, marginTop: '4%'}}>{children}</main>
+          <main style={{ flex: 1, marginTop: 30 }}>{children}</main>
           <Footer />
         </Container>
       </ThemeProvider>

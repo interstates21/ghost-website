@@ -38,16 +38,16 @@ export default function Footer() {
       container
       style={{
         minHeight: 150,
-        paddingTop: "3%",
+        paddingTop: 20,
+        marginTop: 30,
+        paddingBottom: 20,
         width: "100%",
-        marginTop: "1%",
-        paddingBottom: "2%",
       }}
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
     >
-      <Grid item xs={6}>
+      <Grid item xs={12} lg={6}>
         <Grid container flexDirection="row" style={{ marginTop: "2%" }}>
           <PersonalDataLine title="interstates21@gmail.com" />
           <PersonalDataLine title="+38(063)581-61-21" />
@@ -57,12 +57,14 @@ export default function Footer() {
       </Grid>
       <Grid
         item
-        xs={6}
+        xs={12}
+        lg={6}
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
+          marginTop: 20,
         }}
       >
         <ContactCollapse />
