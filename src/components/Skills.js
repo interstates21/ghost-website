@@ -341,7 +341,10 @@ export default function NestedList() {
         <ListSubheader
           component="div"
           id="nested-list-subheader"
-        ></ListSubheader>
+          style={{ color: "#063753" }}
+        >
+          Skills
+        </ListSubheader>
       }
       className={classes.root}
     >

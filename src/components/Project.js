@@ -1,50 +1,85 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import clsx from "clsx";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import Collapse from "@material-ui/core/Collapse";
+import Avatar from "@material-ui/core/Avatar";
+import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import { red } from "@material-ui/core/colors";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import LinkIcon from "@material-ui/icons/Link";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import MyModal from "./MyModal";
+import ProjectDetailed from "./ProjectDetailed";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 345,
-    backgroundColor: '#ddd'
+    width: 300,
   },
-});
+  media: {
+    height: 200,
+    // paddingTop: "56.25%", // 16:9
+  },
+  expand: {
+    transform: "rotate(0deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
+      duration: theme.transitions.duration.shortest,
+    }),
+  },
+  expandOpen: {
+    transform: "rotate(180deg)",
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
+}));
 
-export default function ImgMediaCard() {
+export default function RecipeReviewCard({ item }) {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const shorterString = str => {
+    if (str.length < 200) {
+      return str;
+    } else return str.substring(0, 198) + "...";
+  };
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <MyModal open={open} onClose={() => setOpen(false)}>
+        <ProjectDetailed item={item} />
+      </MyModal>
+      <CardActionArea onClick={() => setOpen(true)}>
         <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          height="140"
-          image=""
-          title="Contemplative Reptile"
+          className={classes.media}
+          image={item.image}
+          title="Paella dish"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {item.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {shorterString(item.about)}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <LinkIcon />
+        </IconButton>
+        <IconButton aria-label="git">
+          <GitHubIcon />
+        </IconButton>
       </CardActions>
     </Card>
   );

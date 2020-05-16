@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/app";
-import Image from "../components/image";
 import Timeline from "../components/Timeline";
 import CV from "../components/CV";
 import SEO from "../components/seo";
