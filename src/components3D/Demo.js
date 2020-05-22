@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom";
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame } from "react-three-fiber";
+import { Typography } from "@material-ui/core";
 
 function Box(props) {
   // This reference will give us direct access to the mesh
@@ -17,7 +18,7 @@ function Box(props) {
     <mesh
       {...props}
       ref={mesh}
-      scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
+      scale={hovered ? [3.5, 3.5, 3.5] : [2, 2, 2]}
       onClick={e => setActive(!active)}
       onPointerOver={e => setHover(true)}
       onPointerOut={e => setHover(false)}
@@ -33,14 +34,14 @@ function Box(props) {
 
 const Demo = () => {
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
-      <Box position={[4, 0, 0]} />
-      <Box position={[8, 0, 0]} />
-    </Canvas>
+    <div style={{ marginTop: 60, marginBottom: 60 }}>
+      <Typography>In development</Typography>
+      <Canvas>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[0, 0, 0]} />
+      </Canvas>
+    </div>
   );
 };
 

@@ -22,7 +22,6 @@ import ProjectDetailed from "./ProjectDetailed";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: 300,
   },
   media: {
     height: 200,

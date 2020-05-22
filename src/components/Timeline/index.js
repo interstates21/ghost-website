@@ -58,7 +58,7 @@ const MyTimeline = () => {
         icon={<FaReact />}
       >
         <h3 className="vertical-timeline-element-title">
-          Junior React / React Native Developer
+          React / React Native Developer
         </h3>
         <h4 className="vertical-timeline-element-subtitle">Join.to.it</h4>
         <p>

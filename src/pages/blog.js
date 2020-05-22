@@ -7,20 +7,15 @@ import Image from "../components/ImageCat";
 import SEO from "../components/seo";
 import { Typography, Container, Grid } from "@material-ui/core";
 
-const BlogPost = () => {
-
-}
+const BlogPost = () => {};
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Grid container spacing={5} style={{ justifyContent: "center" }}>
       <Grid item xs={12} lg={8}>
-        <Typography>
-          Welcome to my blog page! I'm going to cultivate my writing habit cause
-          it's an increadible way to structure ideas and consolidate the
-          knowlege.
-        </Typography>
+        <Typography style={{ marginBottom: 15 }}>In development</Typography>
+        <Typography>Welcome to my blog page! Here is a cat pic</Typography>
       </Grid>
       <Grid item xs={12} lg={8}>
         <Image />

@@ -124,7 +124,7 @@ const IndexPage = () => (
           key={index}
           xs={12}
           md={6}
-          lg={3}
+          lg={4}
           style={{
             display: "flex",
             justifyContent: "center",

@@ -3,9 +3,14 @@
   margin-top: 6px;
 }
 
+.vertical-timeline-element-subtitle {
+  opacity: 0.7 !important;
+  font-weight: 400;
+}
+
 .vertical-timeline-element-date {
   color: white !important;
-  opacity: 0.9 !important;
+  opacity: 0.7 !important;
 }
 
 .vertical-timeline-element {
