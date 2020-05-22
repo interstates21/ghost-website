@@ -13,8 +13,13 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import { FaBars } from "react-icons/fa";
 import Grid from "@material-ui/core/Grid";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 import Fab from "@material-ui/core/Fab";
+import Hidden from "@material-ui/core/Hidden";
 import { red } from "@material-ui/core/colors";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LinkIcon from "@material-ui/icons/Link";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -119,6 +124,7 @@ const Technologies = ({ stack }) => {
 export default function RecipeReviewCard({ item }) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  const matches = useMediaQuery(theme => theme.breakpoints.up("sm"));
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -153,45 +159,64 @@ export default function RecipeReviewCard({ item }) {
           />
         </Grid>
         <Grid item xs={10} lg={10}>
-          <div
-            style={{
-              height: 80,
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          {matches ? (
             <div
               style={{
+                height: 80,
+                width: "100%",
                 display: "flex",
-                alignItems: "center",
-                flex: 4,
-                backgroundColor: "#eee",
-                borderRadius: 4,
-                paddingRight: 20,
-                paddingLeft: 20,
-                justifyContent: "center",
+                justifyContent: "space-between",
               }}
             >
-              <Typography
-                variant="h2"
-                style={{ fontSize: "2.3rem", color: "#444" }}
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flex: 4,
+                  backgroundColor: "#eee",
+                  borderRadius: 4,
+                  paddingRight: 20,
+                  paddingLeft: 20,
+                  justifyContent: "center",
+                }}
               >
-                {item.role} | {item.status}
-              </Typography>
-            </div>
-            <div
-              style={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              <div style={{ position: "relative", left: "-100px", top: -5 }}>
-                <Technologies stack={item.stack} />
+                <Typography
+                  variant="h2"
+                  style={{ fontSize: "2.3rem", color: "#444" }}
+                >
+                  {item.role} | {item.status}
+                </Typography>
+              </div>
+
+              <div
+                style={{
+                  flex: 1,
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
+              >
+                <div style={{ position: "relative", left: "-100px", top: -5 }}>
+                  <Technologies stack={item.stack} />
+                </div>
               </div>
             </div>
-          </div>
+          ) : (
+            <>
+              <Typography variant="h5" align="center">
+                {item.role} | {item.status}
+              </Typography>
+              <List aria-label="stack" dense>
+                {item.stack.map((tech, index) => (
+                  <ListItem
+                    key={index}
+                    style={{ backgroundColor: "#f2f2f2", borderRadius: 2 }}
+                  >
+                    <ListItemText primary={tech.name} align="center" />
+                  </ListItem>
+                ))}
+              </List>
+            </>
+          )}
         </Grid>
       </Grid>
       <Grid
@@ -203,7 +228,7 @@ export default function RecipeReviewCard({ item }) {
         {/* <Grid item xs={10}> */}
         {/* </Grid> */}
         {item.pics.map((pic, index) => (
-          <Grid item xs={pic.small ? 7 : 10}>
+          <Grid item xs={pic.small ? 10 : 12} md={pic.small ? 7 : 11}>
             <img src={pic.url} title={pic.alt} />
           </Grid>
         ))}

@@ -12,7 +12,6 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Demo />
-    <PlanetMenu />
   </Layout>
 );
 

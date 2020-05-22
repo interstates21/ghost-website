@@ -119,7 +119,17 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Grid container spacing={10}>
       {projectsList.map((e, index) => (
-        <Grid item key={index} xs={12} md={6} lg={3}>
+        <Grid
+          item
+          key={index}
+          xs={12}
+          md={6}
+          lg={3}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Project item={e} />
         </Grid>
       ))}
