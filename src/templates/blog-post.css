@@ -1,0 +1,10 @@
+.blog-root h1,
+.blog-root p,
+.blog-root ul,
+.blog-root h2,
+.blog-root h3,
+.blog-root h4,
+.blog-root h5,
+.blog-root h6 {
+  color: #ddd;
+}
