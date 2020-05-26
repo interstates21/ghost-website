@@ -6,8 +6,8 @@ author: "Alex Kupin"
 icon: "mind.svg"
 ---
 
-- There is no such thing as yourself. We’re a simple algorithm which receives information from the outsides and transforms into the narrative of ourselves. We are literally the content we follow, the people around us and the habits we have.
-- Our behaviour is mostly a biochemistry, a mixture of hormones in our body. Basically, it’s very hard to control what do you feel, but you could make your environment more hormone-friendly.The most important thing for your happiness, intellect and success is control over your information field. 
+- There is no such thing as yourself. We’re a simple algorithm which receives information from the outsides and transforms into the narrative of ourselves. We are literally the content we follow, the people around us and the habits we have. The most important thing for your happiness, intellect and success is control over your information field. 
+- Our behaviour is mostly a biochemistry, a mixture of hormones in our body. Basically, it’s very hard to control what do you feel, but you could make your environment more hormone-friendly.
 - Most of the information is a noice.
 - Social environment is critically important. You're probably in a bad one. That's likely a reason of your low self-esteem
 - Everything is a habit. Most of the decisions are automatic. It’s much likely to pick up a shitty habit and in that case the time would work against your well-being.
