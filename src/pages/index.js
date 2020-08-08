@@ -14,17 +14,20 @@ import { Typography, Grid, Box } from "@material-ui/core";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Grid container spacing={10} style={{ justifyContent: "center" }}>
+    <Grid
+      container
+      spacing={8}
+      style={{ justifyContent: "center", marginTop: 25 }}
+    >
       <Grid item xs={12} lg={8}>
         <Typography>
-          Nice to meet you! I'm Alex - a Full Stack Developer, who likes
-          building beautiful websites with <b>React.js</b>, cross-platform
-          mobile applications with <b>React Native</b>, <b>THREE.js</b> computer
-          graphics, and <b>Node.js</b> backends. I am eager to outstanding UI/UX
-          and love when all the details are perfectly matched. Also, I love it
-          when my work has either storytelling or social focus. If you'd like to
-          cooperate or discuss the Universe, please, contact me with Telegram,
-          Email, Discord or Upwork.
+          Nice to see you here! I'm Alex - a full stack developer. My primary
+          focus is outstanding UX, clean, reliable, and performant architecture
+          and full responsibility for your project. I have excellent experience
+          in React.js, React Native, Material UI, MERN stack, building, and
+          deploying from scratch as well as dozens of other skills (see the
+          'Resume' section). If you'd like to cooperate, please, contact me with
+          Telegram, Email, Discord, or Upwork (find below).
         </Typography>
       </Grid>
       <Grid item xs={10} lg={8}>

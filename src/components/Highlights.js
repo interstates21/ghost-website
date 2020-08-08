@@ -17,12 +17,19 @@ import {
   GiSpaceShuttle,
   GiTalk,
   GiChecklist,
+  GiCube,
   GiNinjaHead,
 } from "react-icons/gi";
 
 const highlights = [
   {
-    title: "3+ years in programming",
+    title:
+      "React Frontend Developer building Real World Application for 2+ years.",
+    icon: GiCube,
+    color: "#C33888",
+  },
+  {
+    title: "4+ years in Software Development. Good technological awareness",
     icon: GiTechnoHeart,
     color: "#C33888",
   },
@@ -37,7 +44,7 @@ const highlights = [
     color: "#C33888",
   },
   {
-    title: "Aspire to be a curious explorer like astronauts and scientists",
+    title: "Curious",
     icon: GiSpaceShuttle,
     color: "#C33888",
   },
@@ -47,20 +54,13 @@ const highlights = [
     color: "#C33888",
   },
   {
-    title:
-      "Like community spirit, social experiments and great teams of friends",
+    title: "Like community spirit, social experiments, team work, storytelling",
     icon: GiThreeFriends,
     color: "#C33888",
   },
   {
     title: "Runner",
     icon: GiRunningShoe,
-    color: "#C33888",
-  },
-  {
-    title:
-      "Like stories and smart talks about Physics, Society, Unique Personal Experience",
-    icon: GiDiscussion,
     color: "#C33888",
   },
   {
