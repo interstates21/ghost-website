@@ -30,7 +30,7 @@
     "react-planet": "^1.0.0",
     "react-three-fiber": "^4.2.4",
     "react-vertical-timeline-component": "^2.6.2",
-    "three": "^0.116.1"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"
